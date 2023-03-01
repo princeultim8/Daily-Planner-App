@@ -15,4 +15,4 @@ https://princeultim8.github.io/Daily-Planner-App/
 
 
 ## Screenshot
-<img src="screencapture.png" alt="web capture" />
+<img src="./screencapture.png" alt="web capture" />
