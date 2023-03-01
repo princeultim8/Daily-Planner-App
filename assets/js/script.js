@@ -13,17 +13,13 @@ $(document).ready(function () {
     startPlanner();
   
     // Render and display the daily planner
-    // The rows of the planner must start with 9 and end with 5.
-    // Initialise the starting hour
+    
     function renderPlanner(today, events) {
       let hourRow = moment(today).hour(9); // This will start the rows from 9
       let planner = $(".container");
       planner.empty();
   
       // Increment the number of rows by 1 and display it on the page
-      // Increment until 'X' number of rows is displayed
-  
-      // * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
   
       for (i = 0; i < 9; i++) {
         let row = $("<div>").addClass("row");
@@ -55,8 +51,8 @@ $(document).ready(function () {
             .attr("id", hourRow.format("hA"))
         );
   
-        // * Present timeblocks for standard business hours when the user scrolls down.
-        // Increment the timings between each row by 1.
+        // * Present time blocks for standard business hours when the user scrolls down.
+ 
   
         hourRow.add(1, "hour");
   
@@ -97,8 +93,6 @@ $(document).ready(function () {
     }
   
     // Save the event using the save button
-  
-    // * Save the event in local storage when the save button is clicked in that timeblock.
   
     $(document).on("click", ".saveBtn", function (e) {
       let plannerEvent = e.currentTarget.parentElement.children[1].value;
